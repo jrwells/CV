@@ -20,16 +20,16 @@
 \definecolor{gray}{HTML}{4D4D4D}
 \definecolor{lightgray}{HTML}{999999}
 
-\definecolor{green}{HTML}{C2E15F}
-\definecolor{orange}{HTML}{FDA333}
-\definecolor{purple}{HTML}{D3A4F9}
-\definecolor{red}{HTML}{FB4485}
-\definecolor{blue}{HTML}{6CE0F1}
+\definecolor{green}{HTML}{99CC99}
+\definecolor{orange}{HTML}{F99157}
+\definecolor{aqua}{HTML}{66CCCC}
+\definecolor{red}{HTML}{F2777A}
+\definecolor{blue}{HTML}{6699CC}
 
 \ifdefined\@cv@print
   \colorlet{green}{gray}
   \colorlet{orange}{gray}
-  \colorlet{purple}{gray}
+  \colorlet{aqua}{gray}
   \colorlet{red}{gray}
   \colorlet{blue}{gray}
   \colorlet{fillheader}{white}
@@ -74,9 +74,9 @@
       \fontsize{14pt}{24pt}\color{header}%
       \thinfont #4%
     };
-  \end{tikzpicture}
-  \vspace{2.5cm}
-  \vspace{-2\parskip}
+  \end{tikzpicture}%
+  \vspace{2.5cm}%
+  \vspace{-2\parskip}%
 }
 
 %%%%%%%%%%%%%
@@ -85,28 +85,25 @@
 \RequirePackage{parskip}
 
 \newcounter{colorCounter}
-\def\@sectioncolor#1#2#3{%
-  {%
-    \color{%
-      \ifcase\value{colorCounter}%
-        blue\or%
-        red\or%
-        orange\or%
-        green\or%
-        purple\else%
-        headercolor\fi%
-    } #1#2#3%
+\def\@sectioncolor{%
+  \color{%
+    \ifcase\value{colorCounter}%
+      blue\or%
+      red\or%
+      orange\or%
+      green\or%
+      aqua\else%
+      headercolor\fi%
   }%
   \stepcounter{colorCounter}%
 }
 
-\renewcommand{\section}[1]{
+\renewcommand{\section}[1]{%
   \par\vspace{\parskip}
   {%
-    \LARGE\headingfont\color{headercolor}%
-    \@sectioncolor #1%
-  }
-  \par\vspace{\parskip}
+    \LARGE\headingfont\@sectioncolor #1%
+  }%
+  \par\vspace{\parskip}%
 }
 
 \pagestyle{empty}
@@ -119,7 +116,7 @@
 \newenvironment{entrylist}{%
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
 }{%
-  \end{tabular*}
+  \end{tabular*}%
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
@@ -139,17 +136,17 @@
 \setlength{\TPVertModule}{1cm}
 \newenvironment{aside}{%
   \let\oldsection\section
-  \renewcommand{\section}[1]{
-    \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
-  }
-  \begin{textblock}{3.6}(1.5, 4.33)
-  \begin{flushright}
-  \obeycr
+  \renewcommand{\section}[1]{%
+    \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}%
+  }%
+  \begin{textblock}{3.6}(1.5, 4.33)%
+  \begin{flushright}%
+  \obeycr%
 }{%
-  \restorecr
-  \end{flushright}
-  \end{textblock}
-  \let\section\oldsection
+  \restorecr%
+  \end{flushright}%
+  \end{textblock}%
+  \let\section\oldsection%
 }
 
 %%%%%%%%%%%%%%%%
