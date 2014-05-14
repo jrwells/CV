@@ -24,7 +24,8 @@
 \definecolor{orange}{HTML}{F99157}
 \definecolor{aqua}{HTML}{66CCCC}
 \definecolor{red}{HTML}{F2777A}
-\definecolor{blue}{HTML}{6699CC}
+\definecolor{blue}{HTML}{81A2bE}
+%\definecolor{blue}{HTML}{6699CC}
 
 \ifdefined\@cv@print
   \colorlet{green}{gray}
@@ -101,7 +102,7 @@
 \renewcommand{\section}[1]{%
   \par\vspace{\parskip}
   {%
-    \LARGE\headingfont\@sectioncolor #1%
+    \LARGE\headingfont\color{blue} #1%
   }%
   \par\vspace{\parskip}%
 }
