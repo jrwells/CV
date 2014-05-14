@@ -64,12 +64,6 @@
 
 \RequirePackage{tikz}
 
-\newcommand{\rolefont}{%
-  \fontsize{14pt}{24pt}\selectfont%
-  \thinfont%
-  \color{white}%
-}
-
 \newcommand{\header}[4]{%
   \begin{tikzpicture}[remember picture,overlay]
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
@@ -115,12 +109,6 @@
     \@sectioncolor #1%
   }
   \par\vspace{\parskip}
-}
-
-\renewcommand{\subsection}[2]{
-  \par\vspace{.5\parskip}%
-  \Large\headingfont\color{headercolor} #2%
-  \par\vspace{.25\parskip}%
 }
 
 \pagestyle{empty}
