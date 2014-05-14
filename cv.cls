@@ -8,7 +8,6 @@
 \ProcessOptions\relax
 \LoadClass{article}
 
-
 %%%%%%%%%%
 % Colors %
 %%%%%%%%%%
@@ -80,7 +79,6 @@
   \vspace{-2\parskip}
 }
 
-
 %%%%%%%%%%%%%
 % Structure %
 %%%%%%%%%%%%%
@@ -113,7 +111,6 @@
 
 \pagestyle{empty}
 
-
 %%%%%%%%%%%%%%%%%%%%
 % List environment %
 %%%%%%%%%%%%%%%%%%%%
@@ -132,7 +129,6 @@
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
     #4\vspace{\parsep}%
   }\\}
-
 
 %%%%%%%%%%%%%%
 % Side block %
@@ -155,7 +151,6 @@
   \end{textblock}
   \let\section\oldsection
 }
-
 
 %%%%%%%%%%%%%%%%
 % Other tweaks %
