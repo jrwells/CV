@@ -1,5 +1,5 @@
 # About
-This repo, forked from Adrien Friggeri, contains both an up-to-date version of my résumé - in both color (cv.pdf) and black & white (cv_print.pdf) - and the XeTeX source for both versions of the résumé.
+This repo, forked from Adrien Friggeri, contains both an up-to-date version of my résumé - in both color (cv.pdf) and black & white (cv_print.pdf) - and the XeTeX source for both versions of the résumé. The script 'print.sh' converts the .tex files into pdfs.
 
 ## License
 
